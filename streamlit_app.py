@@ -10,3 +10,15 @@ with right_column:
         'Sorting hat',
         ("Gryffindor", "Ravenclaw", "Hufflepuff", "Slytherin"))
     st.write(f"You are in {chosen} house!")
+
+################################################
+import time
+
+latest_iteration = left_column.empty()
+bar = left_column.progress(0)
+
+for i in range(100):
+  # Update the progress bar with each iteration.
+  latest_iteration.text(f'Iteration {i+1}')
+  bar.progress(i + 1)
+  time.sleep(1)
